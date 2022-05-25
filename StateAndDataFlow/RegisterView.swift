@@ -28,10 +28,8 @@ struct RegisterView: View {
     }
     
     private func registerUser() {
-        if !userManager.user.name.isEmpty {
-            userManager.user.isRegistered.toggle()
-            DataManager.shared.save(user: userManager.user)
-        }
+        userManager.user.isRegistered.toggle()
+        DataManager.shared.save(user: userManager.user)
     }
 }
 
